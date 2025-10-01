@@ -634,8 +634,8 @@ export default function PrivacyPage() {
                                     Ende des Einsatzes der jeweiligen Technologie durch uns werden die in diesem
                                     Zusammenhang erhobenen Daten gelöscht. Sie können Ihre Einwilligung
                                     jederzeit mit Wirkung für die Zukunft widerrufen. Weitere Informationen zu
-                                    Ihren Widerrufsmöglichkeiten finden Sie in dem Abschnitt "Cookies und
-                                    weitere Technologien". Weitere Informationen einschließlich der Grundlage
+                                    Ihren Widerrufsmöglichkeiten finden Sie in dem Abschnitt &quot;Cookies und
+                                    weitere Technologien&quot;. Weitere Informationen einschließlich der Grundlage
                                     unserer Zusammenarbeit mit den einzelnen Anbietern finden Sie bei den
                                     einzelnen Technologien. Bei Fragen zu den Anbietern und der Grundlage
                                     unserer Zusammenarbeit mit ihnen wenden Sie sich bitte an die in dieser
@@ -688,7 +688,7 @@ export default function PrivacyPage() {
                                     Zum Zwecke der optimierten Vermarktung unserer Webseite haben wir die
                                     <strong>
                                         {" "}
-                                        Datenfreigabeeinstellungen für "Google-Produkte und -Dienste"{" "}
+                                        Datenfreigabeeinstellungen für &quot;Google-Produkte und -Dienste&quot;{" "}
                                     </strong>
                                     aktiviert. So kann Google auf die von Google Analytics erhobenen und
                                     verarbeiteten Daten zugreifen und anschließend zur Verbesserung der

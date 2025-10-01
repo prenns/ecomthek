@@ -10,7 +10,7 @@ export function TrackableButton({
 }: { 
   children: React.ReactNode;
   eventName: string;
-  eventParameters?: Record<string, any>;
+  eventParameters?: Record<string, string | number | boolean>;
 }) {
   const { trackEvent } = useTrackEvent();
 
