@@ -17,7 +17,7 @@ export function useAnalytics() {
 
 // Hook for tracking custom events
 export function useTrackEvent() {
-  const trackEvent = (action: string, parameters?: Record<string, any>) => {
+  const trackEvent = (action: string, parameters?: Record<string, string | number | boolean>) => {
     if (process.env.NODE_ENV === 'production') {
       gtag.event(action, parameters);
     }
