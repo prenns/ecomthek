@@ -43,7 +43,7 @@ export default function Home() {
 
       <main className="container-page">
 
-        <section className="full-bleed">
+        <section id="hero-form" className="full-bleed">
           <HomePageHero />
         </section>
 

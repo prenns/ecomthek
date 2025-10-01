@@ -25,11 +25,22 @@ export default function HeroFormEarlyAccess() {
 
         <div className="relative z-10 container mx-auto px-4 py-16 md:px-6 lg:py-24 2xl:max-w-[1400px]">
           <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
-            {/* Left column - Content */}
-            <div className="text-center lg:text-left">
+            {/* Badge - Mobile: over form, Desktop: over text */}
+            <div className="order-1 lg:order-1 lg:hidden flex justify-center">
               <Badge
                 variant="outline"
-                className="mb-6 border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:border-primary/40 dark:bg-primary/20 dark:text-primary"
+                className="mb-3 border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:border-primary/40 dark:bg-primary/20 dark:text-primary"
+              >
+                <RocketIcon className="mr-1 h-3.5 w-3.5" />
+                Für E-Com Founder, die mehr Gewinn wollen
+              </Badge>
+            </div>
+
+            {/* Left column - Content */}
+            <div className="text-center lg:text-left order-3 lg:order-1">
+              <Badge
+                variant="outline"
+                className="mb-6 border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:border-primary/40 dark:bg-primary/20 dark:text-primary hidden lg:inline-flex"
               >
                 <RocketIcon className="mr-1 h-3.5 w-3.5" />
                 Für E-Com Founder, die mehr Gewinn wollen
@@ -119,7 +130,7 @@ export default function HeroFormEarlyAccess() {
             </div>
 
             {/* Right column - Form */}
-            <div  id="hero-form">
+            <div className="order-2 lg:order-2">
               <AuditSignupForm className="overflow-hidden border pb-0 shadow-lg dark:shadow-primary/10" />
 
             </div>
