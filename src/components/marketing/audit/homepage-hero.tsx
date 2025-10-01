@@ -119,7 +119,7 @@ export default function HeroFormEarlyAccess() {
             </div>
 
             {/* Right column - Form */}
-            <div>
+            <div  id="hero-form">
               <AuditSignupForm className="overflow-hidden border pb-0 shadow-lg dark:shadow-primary/10" />
 
             </div>

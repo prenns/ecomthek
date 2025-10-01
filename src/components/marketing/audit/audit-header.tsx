@@ -117,6 +117,9 @@ const Navbar1 = ({
                 className="h-8 w-auto dark:invert block object-contain"
                 alt={logo.alt}
               />
+              <span className="text-lg font-bold tracking-tighter">
+                {logo.title}
+              </span>
             </a>
             <Sheet>
               <SheetTrigger asChild>
