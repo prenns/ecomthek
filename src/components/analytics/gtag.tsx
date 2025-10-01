@@ -51,8 +51,8 @@ export function GoogleTagManagerNoScript() {
 // Utility functions for tracking events
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: (string | Record<string, string | number | boolean>)[]) => void;
+    dataLayer: Record<string, string | number | boolean>[];
   }
 }
 
@@ -67,7 +67,7 @@ export const gtag = {
   },
 
   // Track custom events
-  event: (action: string, parameters?: Record<string, any>) => {
+  event: (action: string, parameters?: Record<string, string | number | boolean>) => {
     if (typeof window !== 'undefined' && window.dataLayer) {
       window.dataLayer.push({
         event: action,
@@ -79,11 +79,16 @@ export const gtag = {
   // Track conversions
   conversion: (conversionId: string, value?: number, currency?: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'conversion', {
+      const conversionData: Record<string, string | number | boolean> = {
         send_to: conversionId,
-        value: value,
-        currency: currency,
-      });
+      };
+      if (value !== undefined) {
+        conversionData.value = value;
+      }
+      if (currency !== undefined) {
+        conversionData.currency = currency;
+      }
+      window.gtag('event', 'conversion', conversionData);
     }
   },
 };

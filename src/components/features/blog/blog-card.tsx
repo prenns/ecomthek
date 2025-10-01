@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -31,7 +32,7 @@ export default function BlogCard({ post }: BlogCardProps) {
 
   // Category mapping for icons and colors
   const getCategoryInfo = (categorySlug: string) => {
-    const categoryMap: Record<string, { name: string; icon: any; color: string }> = {
+    const categoryMap: Record<string, { name: string; icon: React.ComponentType<{ className?: string }>; color: string }> = {
       'produkt-offer': { name: 'Produkt & Offer', icon: Package, color: 'bg-blue-100 text-blue-600' },
       'shop-conversion': { name: 'Shop & Conversion', icon: ShoppingCart, color: 'bg-green-100 text-green-600' },
       'traffic': { name: 'Traffic', icon: TrendingUp, color: 'bg-purple-100 text-purple-600' },

@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import Image from 'next/image';
+
 // Social Media Icons are now inline SVGs
 
 const footerLinks = [
@@ -73,16 +76,18 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12 md:px-6 2xl:max-w-[1400px]">
         <div className="flex flex-col justify-between md:flex-row">
           <div className="mb-8 md:mb-0">
-            <a href="/" className="flex items-center gap-2">
-              <img
+            <Link href="/" className="flex items-center gap-2">
+              <Image
                 src="/images/logo.png"
+                width={32}
+                height={32}
                 className="h-8 w-auto dark:invert block object-contain"
                 alt="ECOMTHEK Logo"
               />
               <span className="text-lg font-bold tracking-tighter">
                 ECOMTHEK
               </span>
-            </a>
+            </Link>
             <p className="text-muted-foreground mt-4 max-w-xs text-sm">
             Profit-First für D2C-Brands.
             </p>

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -381,15 +382,17 @@ export default function AuditSignupForm({ className }: AuditSignupFormProps) {
 
                         <div className="flex items-center gap-4">
                             <div className="relative h-16 w-16 overflow-hidden rounded-md">
-                                <img
+                                <Image
                                     src="/images/1.png"
                                     alt="Alex Prennsberger"
+                                    width={64}
+                                    height={64}
                                     className="object-cover"
                                 />
                             </div>
                             <div>
                                 <p className="text-sm font-medium">
-                                    "7 Mio. € Umsatz – die Learnings daraus bekommst du jetzt."
+                                    &ldquo;7 Mio. € Umsatz – die Learnings daraus bekommst du jetzt.&rdquo;
                                 </p>
                                 <p className="text-muted-foreground mt-1 text-xs">
                                     Alex Prennsberger, E-Commerce Founder

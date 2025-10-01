@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function DefaultHeader() {
   return (
@@ -8,8 +9,10 @@ export default function DefaultHeader() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <img
+            <Image
               src="/images/logo.png"
+              width={32}
+              height={32}
               className="h-8 w-auto dark:invert block object-contain"
               alt="ECOMTHEK Logo"
             />
