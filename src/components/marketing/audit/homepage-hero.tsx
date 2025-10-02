@@ -23,10 +23,10 @@ export default function HeroFormEarlyAccess() {
         <div className="absolute -top-80 -right-40 h-[500px] w-[500px] rounded-full bg-primary/20 opacity-20 blur-3xl dark:bg-primary/30"></div>
         <div className="absolute -bottom-80 -left-40 h-[500px] w-[500px] rounded-full bg-primary/20 opacity-20 blur-3xl dark:bg-primary/30"></div>
 
-        <div className="relative z-10 container mx-auto px-4 py-16 md:px-6 lg:py-24 2xl:max-w-[1400px]">
+        <div className="relative z-10 container mx-auto px-4 pt-8 pb-16 md:px-6 lg:py-24 2xl:max-w-[1400px]">
           <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
             {/* Badge - Mobile: over form, Desktop: over text */}
-            <div className="order-1 lg:order-1 lg:hidden flex justify-center">
+            <div className="order-1 lg:order-1 lg:hidden mb-[-40px] flex justify-center">
               <Badge
                 variant="outline"
                 className="mb-3 border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:border-primary/40 dark:bg-primary/20 dark:text-primary"

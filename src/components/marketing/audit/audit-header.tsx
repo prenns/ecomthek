@@ -84,7 +84,7 @@ const Navbar1 = ({
                 {logo.title}
               </span>
             </a>
-            
+
             {/* Navigation */}
             <div className="flex items-center gap-8">
               <NavigationMenu>
@@ -92,10 +92,10 @@ const Navbar1 = ({
                   {menu.map((item) => renderMenuItem(item))}
                 </NavigationMenuList>
               </NavigationMenu>
-              
+
               {/* CTA Button */}
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
                 asChild
               >
@@ -107,8 +107,8 @@ const Navbar1 = ({
           </div>
         </nav>
 
-  {/* Mobile Menu */}
-  <div className="block lg:hidden">
+        {/* Mobile Menu */}
+        <div className="block lg:hidden">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a href={logo.url} className="flex items-center gap-2">
@@ -121,7 +121,7 @@ const Navbar1 = ({
                 {logo.title}
               </span>
             </a>
-            <Sheet>
+            {/* <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon">
                   <Menu className="size-4" />
@@ -148,9 +148,9 @@ const Navbar1 = ({
                     {menu.map((item) => renderMobileMenuItem(item))}
                   </Accordion>
 
-                  </div>
+                </div>
               </SheetContent>
-            </Sheet>
+            </Sheet> */}
           </div>
         </div>
       </div>
