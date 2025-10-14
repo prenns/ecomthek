@@ -1,0 +1,86 @@
+---
+description: This rule explains how to create new .mdc project rule files for the Cursor agent.
+globs: "**/*.ts,**/*.js"
+alwaysApply: true
+---
+
+# Cursor Rules Location
+
+How to add new cursor rules to the project
+
+## Rule File Placement
+
+1. Always place rule files in `PROJECT_ROOT/.cursor/rules/`:
+    ```
+    .cursor/rules/
+    ├── your-rule-name.mdc
+    ├── another-rule.mdc
+    └── ...
+    ```
+
+2. Follow the naming convention:
+    - Use kebab-case for filenames
+    - Always use `.mdc` extension
+    - Make names descriptive of the rule's purpose
+
+3. Directory structure:
+    ```
+    PROJECT_ROOT/
+    ├── .cursor/
+    │   └── rules/
+    │       ├── your-rule-name.mdc
+    │       └── ...
+    └── ...
+    ```
+
+4. Never place rule files:
+    - In the project root
+    - In subdirectories outside `.cursor/rules`
+    - In any other location
+
+## Cursor Rule Structure
+
+Every `.mdc` rule file follows this format:
+
+```
+---
+description: Brief explanation of what this rule covers
+globs: "**/*.ts,**/*.js"
+alwaysApply: true
+---
+
+# Your Rule Name
+
+## Key Guidelines
+
+- Use bullet points for clear instructions
+- Include specific examples when helpful
+- Keep rules focused and actionable
+
+## Code Standards
+
+```javascript
+// Preferred approach
+const result = calculateValue(input);
+
+// Avoid this pattern
+var result = input * 2 + 3;
+```
+
+## Implementation Notes
+
+- Explain the reasoning behind rules
+- Provide context for when to apply them
+- Include any exceptions or edge cases
+```
+
+
+
+## Best Practices
+
+- Use clear, descriptive names for rule files
+- Include specific glob patterns when rules apply to certain file types
+- Set `alwaysApply: true` for fundamental rules that should always be considered
+- Set `alwaysApply: false` for context-specific or optional rules
+- Include concrete code examples in your rules
+- Focus on actionable guidelines rather than abstract concepts 

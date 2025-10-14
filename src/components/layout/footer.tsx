@@ -1,9 +1,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-// Social Media Icons are now inline SVGs
+import { Button } from '@/components/ui/button';
 
 const footerLinks = [
+  {
+    title: 'Navigation',
+    links: [
+      { title: 'Vorteile', href: '/#features' },
+      { title: 'Über Uns', href: '/#about' },
+      { title: 'Prozess', href: '/#process' },
+      { title: 'Leistungen', href: '/#services' },
+      { title: 'FAQ', href: '/#faq' },
+    ],
+  },
   {
     title: 'Allgemein',
     links: [
@@ -11,24 +20,12 @@ const footerLinks = [
       { title: 'Impressum', href: '/impressum' },
     ],
   },
-  {
-    title: 'Playbooks',
-    links: [
-      { title: 'Alle', href: '/playbooks' },
-      { title: 'Produkt & Offer', href: '/playbooks/produkt-offer' },
-      { title: 'Shop & Conversion', href: '/playbooks/shop-conversion' },
-      { title: 'Traffic', href: '/playbooks/traffic' },
-      { title: 'Zahlen & Finanzen', href: '/playbooks/zahlen-finanzen' },
-      { title: 'Retention & CRM', href: '/playbooks/retention-crm' },
-      { title: 'Operations & Marke', href: '/playbooks/operations-marke' },
-    ],
-  },
 ];
 
 const socialLinks = [
-  { 
+  {
     icon: 'Facebook',
-    href: 'https://www.facebook.com/profile.php?id=61558168462019', 
+    href: 'https://www.facebook.com/profile.php?id=61558168462019',
     label: 'Facebook',
     svg: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -36,9 +33,9 @@ const socialLinks = [
       </svg>
     )
   },
-  { 
+  {
     icon: 'Instagram',
-    href: 'https://www.instagram.com/ecomthek/', 
+    href: 'https://www.instagram.com/ecomthek/',
     label: 'Instagram',
     svg: (
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,9 +43,9 @@ const socialLinks = [
       </svg>
     )
   },
-  { 
+  {
     icon: 'Twitter',
-    href: 'https://twitter.com/ecomthek', 
+    href: 'https://twitter.com/ecomthek',
     label: 'X (Twitter)',
     svg: (
       <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -56,9 +53,9 @@ const socialLinks = [
       </svg>
     )
   },
-  { 
+  {
     icon: 'YouTube',
-    href: 'https://www.youtube.com/@ecomthek', 
+    href: 'https://www.youtube.com/@ecomthek',
     label: 'YouTube',
     svg: (
       <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -67,6 +64,8 @@ const socialLinks = [
     )
   },
 ];
+
+
 
 export default function Footer() {
 
@@ -85,19 +84,19 @@ export default function Footer() {
                 alt="ECOMTHEK Logo"
               />
               <span className="text-lg font-bold tracking-tighter">
-                ECOMTHEK
+                ECOMTHEK AI
               </span>
             </Link>
             <p className="text-muted-foreground mt-4 max-w-xs text-sm">
-            Profit-First für D2C-Brands.
+              Automatisiere dein E-Commerce-Business mit KI-Agenten.
             </p>
             <div className="mt-4">
-              <a 
+              <Link
                 href="mailto:hello@ecomthek.com"
                 className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
               >
                 hello@ecomthek.com
-              </a>
+              </Link>
             </div>
             <div className="mt-6 flex gap-4">
               {socialLinks.map((link) => (
@@ -115,19 +114,19 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {footerLinks.map((group, index) => (
               <div key={group.title || index} className="space-y-3">
                 {group.title && <h3 className="text-sm font-medium">{group.title}</h3>}
                 <ul className="space-y-2">
                   {group.links.map((link) => (
                     <li key={link.title}>
-                      <a
+                      <Link
                         href={link.href}
                         className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -140,7 +139,12 @@ export default function Footer() {
           <p className="text-muted-foreground text-center text-sm md:text-left">
             &copy; {new Date().getFullYear()} ECOMTHEK. Alle Rechte vorbehalten.
           </p>
-         
+
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/termin">
+              Termin buchen
+            </Link>
+          </Button>
         </div>
       </div>
     </footer>

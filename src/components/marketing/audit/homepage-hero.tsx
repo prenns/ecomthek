@@ -24,7 +24,7 @@ export default function HeroFormEarlyAccess() {
         <div className="absolute -bottom-80 -left-40 h-[500px] w-[500px] rounded-full bg-primary/20 opacity-20 blur-3xl dark:bg-primary/30"></div>
 
         <div className="relative z-10 container mx-auto px-4 pt-8 pb-16 md:px-6 lg:py-24 2xl:max-w-[1400px]">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
+          <div className="mx-auto grid max-6xl items-center gap-12 lg:grid-cols-2">
             {/* Badge - Mobile: over form, Desktop: over text */}
             <div className="order-1 lg:order-1 lg:hidden mb-[-40px] flex justify-center">
               <Badge
@@ -43,29 +43,19 @@ export default function HeroFormEarlyAccess() {
                 className="mb-6 border-primary/20 bg-primary/10 px-3 py-1 text-sm font-medium text-primary dark:border-primary/40 dark:bg-primary/20 dark:text-primary hidden lg:inline-flex"
               >
                 <RocketIcon className="mr-1 h-3.5 w-3.5" />
-                Für E-Com Founder, die mehr Gewinn wollen
+                Für performance-orientierte D2C-Brands
               </Badge>
 
-              <h1 className="mb-6 text-4xl font-bold tracking-tight lg:text-6xl">
-                Skaliere deinen Shop mit den Strategien echter 7-stelliger Gründer
+              <h1 className="mb-6 text-4xl font-bold tracking-tight leading-tight lg:text-6xl lg:leading-tight">
+              Wachse profitabel – während <span className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">KI deine operative Arbeit übernimmt.</span>
               </h1>
 
               <p className="text-muted-foreground mx-auto mb-8 max-w-lg text-xl lg:mx-0">
-                Ich decke deine größten Umsatz-Leaks auf und zeige dir, wie du sofort mehr Gewinn aus deinem Shop holst.
+              KI Systeme automatisieren dein Reporting, Inventory und Customer Service – damit du wieder Zeit für Wachstum hast
               </p>
 
               <div className="mb-10 grid gap-8">
-                <div className="flex items-start">
-                  <div className="mr-4 flex-shrink-0 rounded-full bg-primary/10 p-2 dark:bg-primary/20">
-                    <EuroIcon className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <h3 className="text-base font-semibold">Fokus auf Profit statt nur Umsatz</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Ich zeige dir, wo Geld übrig bleibt – nicht nur, wie du mehr Umsatz machst.
-                    </p>
-                  </div>
-                </div>
+               
 
                 <div className="flex items-start">
                   <div className="mr-4 flex-shrink-0 rounded-full bg-primary/10 p-2 dark:bg-primary/20">
@@ -73,10 +63,22 @@ export default function HeroFormEarlyAccess() {
                   </div>
                   <div className="text-left">
                     <h3 className="text-base font-semibold">
-                      Praxis aus echter D2C-Brand
+                      Wachstum ohne Headcount
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      Strategien, die ich selbst mit WUNDERklein umgesetzt habe.
+                    Skaliere auf die nächste Stufe, ohne dein Team zu verdoppeln.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="mr-4 flex-shrink-0 rounded-full bg-primary/10 p-2 dark:bg-primary/20">
+                    <EuroIcon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-base font-semibold">80% weniger operative Arbeit</h3>
+                    <p className="text-muted-foreground text-sm">
+                    Deine wichtisten Prozesse laufen automatisch. Du gewinnst 15–20h pro Woche zurück.
                     </p>
                   </div>
                 </div>
@@ -87,10 +89,10 @@ export default function HeroFormEarlyAccess() {
                   </div>
                   <div className="text-left">
                     <h3 className="text-base font-semibold">
-                      Schnelle Analyse – konkrete Ergebnisse
+                    Entscheidungen auf Datenbasis
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      In 48 Stunden weißt du, wo deine größten Umsatz-Leaks liegen und was du tun kannst.
+                    Die richtigen Daten zur richtigen Zeit, täglich – in 5 Minuten statt 5 Stunden.
                     </p>
                   </div>
                 </div>

@@ -1,0 +1,44 @@
+---
+description: Core principles for designing clean, maintainable, and efficient code across multiple programming languages and paradigms.
+globs: "**/*.js,**/*.jsx,**/*.ts,**/*.tsx,**/*.py,**/*.java,**/*.swift,**/*.dart,**/*.go,**/*.rb,**/*.php,**/*.cs"
+alwaysApply: true
+---
+
+# Development Standards
+
+## Core Philosophy
+- Design clean, maintainable, and efficient code across multiple programming languages and paradigms
+- Balance theoretical best practices with practical implementation needs
+
+## Design Principles
+- **Clarity Over Cleverness**: Write straightforward code that future developers can understand quickly
+- **Composition Over Inheritance**: Compose small, focused functions or modules instead of complex inheritance hierarchies
+- **Single Responsibility**: Ensure each function, module, or component does exactly one thing well
+- **DRY (Don't Repeat Yourself)**: Eliminate duplication through thoughtful abstraction and reuse
+- **YAGNI (You Aren't Gonna Need It)**: Implement only what is necessary today, not speculative features
+
+## Coding Style
+- Use clear, descriptive names that reveal intent (e.g., `fetchUserData`, not `getData`)
+- Create small, pure functions with limited parameters and explicit return values
+- Provide explicit, informative error handling at appropriate boundaries
+- Document the *why* not the *what*—your code should be self-explanatory
+- Write unit, integration, and end-to-end tests that execute quickly and deterministically
+
+## Technical Implementation
+- **State Management**: Minimize mutable state; favor immutable patterns wherever possible
+- **API Design**: Provide RESTful or GraphQL interfaces with consistent patterns and error responses
+- **Performance**: Consider algorithmic complexity, caching strategies, and asynchronous patterns
+- **Security**: Follow OWASP guidelines—validate inputs, sanitize outputs, implement robust authentication & authorization
+- **Accessibility**: Design systems usable by everyone, adhering to WCAG standards
+
+## Platform-Specific Guidelines
+- **Frontend**: Employ component architecture, responsive design, and progressive enhancement
+- **Backend**: Apply API design best practices, optimized database access, caching strategies, and microservice patterns
+- **Mobile**: Deliver native and cross-platform solutions with offline-first strategies and performance optimizations
+- **DevOps**: Build CI/CD pipelines, infrastructure as code, containerization, and observability
+
+## Implementation Details
+- Provide language-specific implementation details based on modern standards
+- Use architectural patterns appropriate to the platform and scale
+- Apply refactoring strategies to improve code quality over time
+- Use debugging approaches based on community best practices

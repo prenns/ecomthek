@@ -1,8 +1,19 @@
+'use client'
+
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
-export default function DefaultHeader() {
+type DefaultHeaderProps = {
+  showTerminButton?: boolean;
+};
+
+export default function DefaultHeader({ showTerminButton = true }: DefaultHeaderProps) {
+  const pathname = usePathname();
+  const isTerminPage = pathname === '/termin';
+  const displayTerminButton = showTerminButton && !isTerminPage;
+
   return (
     <section className="py-4 border-b">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
@@ -22,13 +33,25 @@ export default function DefaultHeader() {
           </Link>
           
           {/* Navigation */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <Link 
               href="/blog" 
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Blog
             </Link>
+            
+            {displayTerminButton && (
+              <Button 
+                variant="outline"
+                size="sm" 
+                asChild
+              >
+                <Link href="/termin">
+                  Termin buchen
+                </Link>
+              </Button>
+            )}
             
             <Button 
               size="sm" 

@@ -1,0 +1,63 @@
+---
+description: Guidelines for adopting and customizing shadcn-svelte UI components across the frontend.
+globs: src/lib/components/**/*.{svelte,ts}
+alwaysApply: true
+---
+
+# shadcn Component Usage Standards
+
+## Core Philosophy
+- Re-use before re-inventing: prefer shadcn components for common UI patterns
+- Maintain visual and interaction consistency throughout the application
+- Extend via composition rather than forking core library code
+
+## When to Use shadcn Components
+- Standard UI primitives (buttons, badges, dialogs, tooltips, etc.)
+- Patterns already provided in the library (accordion, carousel, table, form controls)
+- Situations where accessibility concerns are already solved by shadcn
+
+## When *Not* to Use shadcn Components
+- Highly brand-specific widgets that differ significantly in interaction or markup
+- Ultra-lightweight elements where including the component’s JS/CSS would add unnecessary bundle weight
+- Temporary prototypes that will be removed shortly
+
+## Implementation Guidelines
+1. **Import Path** – Always import from `$lib/components/ui/...`:
+   ```svelte
+   <script lang="ts">
+     import { Button } from '$lib/components/ui/button';
+   </script>
+   ```
+2. **Styling** – Customize using Tailwind utility classes or `class` props rather than editing component source.
+3. **Accessibility** – Do not remove ARIA roles or keyboard handlers that ship with the component.
+4. **Variants & Size Props** – Prefer the built-in `variant` / `size` props over ad-hoc CSS.
+5. **Icon Placement** – Use slot conventions (`<Button><Icon slot="leading"/>Label</Button>`) to keep alignment consistent.
+6. **Shadow & Radius** – Respect global design tokens: `shadow-sm` for popouts; `rounded-[6px]` for buttons [[memory:1931209]].
+7. **Tree-Shaking** – Import only the components needed in a route; avoid large barrel imports.
+8. **Dynamic Imports** – For heavy components (e.g., `carousel`), load lazily using `await import()` inside on-client code.
+9. **Brand Overrides** – If brand theming is required, wrap the component in a local `<MyButton>` wrapper rather than editing vendor code.
+
+## File & Folder Conventions
+- Place any wrappers under `src/lib/components/custom/`
+- Name files using PascalCase for Svelte components (`MyFancyButton.svelte`)
+- Keep shared Tailwind plugin definitions in `tailwind.config.js`
+
+## Testing Checklist
+- ☐ Visual regression snapshots updated (Chromatic/Playwright)
+- ☐ Keyboard navigation works (Tab, Arrow, Escape)
+- ☐ Screen-reader labels/roles verified
+
+## ADR Template for Divergence
+If you decide *not* to use a shadcn component where one exists, create an ADR explaining:
+- Context & rationale
+- Alternative considered
+- Impact on maintenance & bundle size
+- Owner & expiry review date
+
+## Tooling & Linting
+- ESLint rule `@typescript-eslint/consistent-type-imports` to keep imports tidy
+- Optional: Add a custom ESLint rule that flags direct `<button>` elements outside of shadcn components
+
+## Resources
+- shadcn-svelte docs: https://ui.shadcn.com
+- Internal component guide (always_applied_workspace_rules) 

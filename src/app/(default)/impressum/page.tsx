@@ -1,4 +1,6 @@
 
+import CTASection from '@/components/shadcn-studio/blocks/cta-section-04/cta-section-04';
+
 export const metadata = {
     title: 'Impressum | Ecomthek',
     description: '',
@@ -6,6 +8,7 @@ export const metadata = {
 
 export default function ImprintPage() {
     return (
+        <>
         <section className="bg-background">
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:pb-16">
                 <div>
@@ -151,5 +154,8 @@ export default function ImprintPage() {
 
                 </div>
             </div>
-        </section>);
+        </section>
+        <CTASection />
+        </>
+    );
 }

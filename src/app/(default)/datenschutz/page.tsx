@@ -1,3 +1,5 @@
+import CTASection from '@/components/shadcn-studio/blocks/cta-section-04/cta-section-04';
+
 export const metadata = {
     title: 'Datenschutzerklärung | Ecomthek',
     description: '',
@@ -1165,6 +1167,7 @@ export default function PrivacyPage() {
                     </div>
                 </div>
             </section>
+            <CTASection />
         </>
 
     );
