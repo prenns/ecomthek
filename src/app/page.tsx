@@ -16,11 +16,11 @@ import ProblemSection from '@/components/shadcn-studio/blocks/about-us-page-05/a
 import AppIntegration from '@/components/shadcn-studio/blocks/app-integration-05/app-integration-05'
 
 export const metadata: Metadata = {
-  title: 'Automatisiere dein E-Commerce-Business mit KI-Agenten | Ecomthek',
-  description: 'Wir bauen KI Agenten, die deine E-Commerce Operations automatisieren. Weniger Personalkosten, mehr Zeit für Wachstum.',
+  title: 'Automatisiere dein E-Commerce-Business mit KI Systemen | Ecomthek',
+  description: 'Wir KI Systeme, die deine E-Commerce Operations automatisieren. Weniger Personalkosten, mehr Zeit für Wachstum.',
   openGraph: {
-    title: 'Automatisiere dein E-Commerce-Business mit KI-Agenten | Ecomthek',
-    description: 'Wir bauen KI Agenten, die deine E-Commerce Operations automatisieren. Weniger Personalkosten, mehr Zeit für Wachstum.',
+    title: 'Automatisiere dein E-Commerce-Business mit KI System | Ecomthek',
+    description: 'Wir bauen KI Systeme, die deine E-Commerce Operations automatisieren. Weniger Personalkosten, mehr Zeit für Wachstum.',
     type: 'website',
   },
 }

@@ -11,7 +11,7 @@ export default function SplitContentHero() {
           <div className="flex flex-col space-y-4 md:col-span-7">
             <div className="focus:ring-ring bg-transparent text-primary hover:bg-primary/10 inline-flex w-fit items-center gap-1.5 rounded-full border border-primary px-2.5 py-0.5 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none">
               <Target className="h-3.5 w-3.5" />
-              <span>Für performance-orientierte D2C-Brands</span>
+              <span>Für performance-orientierte E-Commerce-Brands</span>
             </div>
             <h1 className="relative text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
               <span className="bg-gradient-to-r from-blue-300 via-purple-400 to-purple-500 bg-clip-text text-transparent">
@@ -23,7 +23,7 @@ export default function SplitContentHero() {
               <div className="absolute -inset-8 -z-20 bg-gradient-to-r from-blue-300/10 via-purple-400/10 to-purple-500/10 blur-2xl opacity-40"></div>
             </h1>
             <p className="text-muted-foreground max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Wir bauen KI Agenten, die deine E-Commerce Operations automatisieren. Weniger Personalkosten, mehr Zeit für Wachstum.
+            Wir implementieren KI Systeme, die deine E-Commerce Operations automatisieren. Weniger Personalkosten, mehr Zeit für Wachstum.
             </p>
             <CTAButton className="items-start" trustTextClassName="text-left" />
 
